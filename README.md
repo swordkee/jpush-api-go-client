@@ -3,12 +3,12 @@ jpush-api-go-client
 
 概述
 ----------------------------------- 
-这是JPush REST API 的 go 版本封装开发包,仅支持最新的REST API v3功能，最近更新：2023-10-30。REST API 文档：http://docs.jpush.cn/display/dev/Push-API-v3
+这是JPush REST API 的 go 版本封装开发包,仅支持最新的REST API v3功能，最近更新：2023-10-30。REST API 文档：https://docs.jiguang.cn/jpush/server/push/server_overview
 
 
 使用
 ----------------------------------- 
-go get github.com/swordkee/jpush-api-go-client
+go install github.com/swordkee/jpush-api-go-client@latest
 
 
 推送流程
@@ -18,7 +18,7 @@ go get github.com/swordkee/jpush-api-go-client
 
 	//Platform
 	var pf jpushclient.Platform
-	pf.AddAndroid().AddQuickApp().AddIOS().AddWinPhone()
+	pf.AddAndroid().AddQuickApp().AddIOS()
 	//pf.All()
 
 ### 2.构建接收听众： jpushclient.Audience
@@ -80,7 +80,7 @@ go get github.com/swordkee/jpush-api-go-client
 
 		//Platform
 		var pf jpushclient.Platform
-		pf.AddAndroid().AddQuickApp().AddIOS().AddWinPhone()
+		pf.AddAndroid().AddQuickApp().AddIOS()
 		//pf.All()
 
 		//Audience

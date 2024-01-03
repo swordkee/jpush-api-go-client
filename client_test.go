@@ -45,7 +45,7 @@ func getMsg() *PushRequest {
 	op.SetTimeToLive(86400).SetApnsId("jiguang_test_201706011100")
 	log.Println(op.ToJson())
 	var cal CallBack
-	cal.SetUrl("http://www.jpush.cn").SetType("3")
+	cal.SetUrl("https://www.jpush.cn").SetType("3")
 	req := NewPushRequest()
 	req.SetPlatform(&pf).
 		SetAudience(&ad).

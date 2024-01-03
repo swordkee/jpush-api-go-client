@@ -58,7 +58,9 @@ func (c *Client) request(method, link string, body io.Reader, isGroup bool) (*Re
 	if err != nil {
 		return nil, err
 	}
-	defer resp.Body.Close()
+	defer func(Body io.ReadCloser) {
+		_ = Body.Close()
+	}(resp.Body)
 	buf, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
